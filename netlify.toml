@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/comms"
+  to = "/comms/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/technology"
+  to = "/technology/index.html"
+  status = 200

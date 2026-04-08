@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Team | Pilot Parish Initiative | Diocese of Bridgeport</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #1a2744;
+    --gold:       #b8953a;
+    --gold-light: #f0e4c4;
+    --gold-mid:   #d4a93e;
+    --warm-white: #faf8f4;
+    --text:       #2c2c2c;
+    --text-light: #5a5a5a;
+    --rule:       #d4c9b0;
+    --cream:      #f5f0e8;
+    --comms:      #2d5fa0;
+    --tech:       #1a6b72;
+    --data:       #5a3a7a;
+    --youth:      #b8460a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  .site-nav {
+    background: var(--navy);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-brand {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+
+  .nav-links a {
+    font-size: 12px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover, .nav-links a.active { color: white; }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: var(--navy);
+    padding: 56px 64px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(184,149,58,0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .ph-inner { max-width: 900px; margin: 0 auto; position: relative; }
+
+  .ph-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+  }
+
+  .page-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px; font-weight: 500; color: white;
+    line-height: 1.1; margin-bottom: 14px;
+  }
+
+  .page-header h1 em { font-style: italic; color: #c5d5e8; }
+
+  .page-header p { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 560px; line-height: 1.7; margin: 0; }
+
+  /* ── CONTENT ── */
+  .content { max-width: 900px; margin: 0 auto; padding: 64px 40px; }
+
+  .section-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px; font-weight: 500; color: var(--navy);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+
+  p { color: var(--text); margin-bottom: 16px; max-width: 680px; }
+
+  .divider { border: none; border-top: 1px solid var(--rule); margin: 56px 0; }
+
+  /* ── BIO CARD ── */
+  .bio-card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  .bc-header {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .bc-color-bar {
+    width: 6px;
+    flex-shrink: 0;
+  }
+
+  .bc-color-lead  { background: var(--navy); }
+  .bc-color-comms { background: var(--comms); }
+  .bc-color-tech  { background: var(--tech); }
+  .bc-color-data  { background: var(--data); }
+  .bc-color-youth { background: var(--youth); }
+
+  .bc-header-inner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 28px;
+    flex: 1;
+  }
+
+  .bc-avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--navy); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 500; letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  .bc-avatar.av-comms { background: var(--comms); }
+  .bc-avatar.av-tech  { background: var(--tech); }
+  .bc-avatar.av-data  { background: var(--data); }
+  .bc-avatar.av-youth { background: var(--youth); }
+
+  .bc-name-block { flex: 1; }
+
+  .bc-area-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+
+  .al-lead  { color: var(--gold); }
+  .al-comms { color: var(--comms); }
+  .al-tech  { color: var(--tech); }
+
+  .bc-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px; font-weight: 500; color: var(--navy);
+    line-height: 1.1; margin-bottom: 3px;
+  }
+
+  .bc-title { font-size: 13px; color: var(--text-light); }
+
+  .bc-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+
+  .bc-chip {
+    font-size: 10px; font-weight: 600;
+    padding: 3px 8px; border-radius: 20px;
+    background: var(--cream); border: 1px solid var(--rule);
+    color: var(--text-light);
+  }
+
+  /* bio body */
+  .bc-body { padding: 28px 32px; }
+
+  .bc-body p {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.8;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .bc-body p:last-child { margin-bottom: 0; }
+  .bc-body strong { color: var(--navy); }
+
+  /* placeholder box */
+  .bio-placeholder {
+    border: 1px dashed var(--rule);
+    border-radius: 4px;
+    padding: 16px 20px;
+    background: var(--cream);
+    margin-top: 16px;
+  }
+
+  .bp-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-light); margin-bottom: 6px;
+  }
+
+  .bio-placeholder p { font-size: 12px; color: var(--text-light); font-style: italic; margin: 0; }
+
+  /* coming soon card */
+  .bio-card.coming-soon {
+    opacity: 0.65;
+    border-style: dashed;
+  }
+
+  .coming-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; padding: 4px 10px;
+    border-radius: 2px; background: var(--cream);
+    color: var(--text-light); align-self: center;
+    white-space: nowrap;
+  }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--navy); color: rgba(255,255,255,0.4);
+    text-align: center; padding: 24px 40px;
+    font-size: 12px; margin-top: 40px;
+  }
+
+  .doc-footer strong { color: white; }
+
+  @media (max-width: 700px) {
+    .page-header { padding: 48px 24px; }
+    .page-header h1 { font-size: 36px; }
+    .content { padding: 40px 20px; }
+    .bc-header-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .nav-links { display: none; }
+    .site-nav { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a class="nav-brand" href="pilot-parish-hub.html">
+    <span>Seton</span> Collaborative · Diocese of Bridgeport
+  </a>
+  <ul class="nav-links">
+    <li><a href="pilot-parish-hub.html">Overview</a></li>
+    <li><a href="parish-comms-strategy-v2.html">Communications</a></li>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Data</a></li>
+    <li><a href="#">Youth Ministry</a></li>
+    <li><a href="#" class="active">The Team</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-inner">
+    <div class="ph-label">Pilot Parish Initiative</div>
+    <h1>The <em>Intervention Team</em></h1>
+    <p>Real people with deep expertise, committed to the mission of the Diocese — and to the specific parishes they're here to serve.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="section-label">Program Leadership</div>
+  <h2>Who We Are</h2>
+
+  <p>The Intervention Team is not a committee. It is a working group of specialists — each responsible for a defined area of support, each in direct relationship with the parishes they serve. As the program grows, the team grows with it.</p>
+
+  <!-- ── CHRIS ── -->
+  <div class="bio-card">
+    <div class="bc-header">
+      <div class="bc-color-bar bc-color-lead"></div>
+      <div class="bc-header-inner">
+        <div class="bc-avatar">CG</div>
+        <div class="bc-name-block">
+          <div class="bc-area-label al-lead">Program Lead · Executive Director</div>
+          <div class="bc-name">Chris Greer</div>
+          <div class="bc-title">Executive Director, Seton Collaborative · Deacon, Diocese of Bridgeport</div>
+          <div class="bc-chips">
+            <span class="bc-chip">Program Lead</span>
+            <span class="bc-chip">Parish Strategy</span>
+            <span class="bc-chip">Technology</span>
+            <span class="bc-chip">Operations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bc-body">
+      <div class="bio-placeholder">
+        <div class="bp-label">📝 Chris — Your Bio Goes Here</div>
+        <p>Your background, your role in the diocese, what drew you to building this program, and what you bring to the parishes you serve. Write it the way you'd introduce yourself to a pastor you've never met — direct, honest, and specific about what you're here to do.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ROGER ── -->
+  <div class="bio-card">
+    <div class="bc-header">
+      <div class="bc-color-bar bc-color-comms"></div>
+      <div class="bc-header-inner">
+        <div class="bc-avatar av-comms">RR</div>
+        <div class="bc-name-block">
+          <div class="bc-area-label al-comms">Communications &amp; Design</div>
+          <div class="bc-name">Roger Rybkowski</div>
+          <div class="bc-title">Parish Communications Advisor · Seton Collaborative</div>
+          <div class="bc-chips">
+            <span class="bc-chip">35 Years Experience</span>
+            <span class="bc-chip">Catholic Institutions</span>
+            <span class="bc-chip">Brand &amp; Design</span>
+            <span class="bc-chip">Multi-Channel Strategy</span>
+            <span class="bc-chip">Adobe Creative Suite</span>
+            <span class="bc-chip">U.S. Navy Veteran</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bc-body">
+      <p>For 35 years, Roger Rybkowski built communications programs for Catholic schools and parishes across California — running his own design and communications firm for 25 years, then serving a decade as Director of Marketing and Communications at Palma School in Salinas. He knows Catholic institutional life from the inside: the pastor's authority, the staff's constraints, the volunteer culture, the parishioner who needs to feel invited rather than announced at. He has carried an institution's entire communications identity in his hands — alone — and produced work that moved people.</p>
+
+      <p>He and his wife Cindy recently relocated to Connecticut to be closer to their family. When he arrived, he reached out to the Diocese and asked if he could help. That's who Roger is. He didn't answer a job posting. He showed up and offered. His approach to multi-channel engagement — understanding how a direct mail piece, a well-designed bulletin, a digital post, and a website work together as a system rather than as separate tasks — is something most parishes have never had applied to their specific situation. He brings that to every audit and every strategy session he leads.</p>
+
+      <div class="bio-placeholder">
+        <div class="bp-label">📝 Add Roger's Quote Here</div>
+        <p>One or two sentences from Roger in his own words — what drew him to this work, or what he believes great parish communications can do — will be added here once we have it from him.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RAFFAELE ── -->
+  <div class="bio-card">
+    <div class="bc-header">
+      <div class="bc-color-bar bc-color-tech"></div>
+      <div class="bc-header-inner">
+        <div class="bc-avatar av-tech">RS</div>
+        <div class="bc-name-block">
+          <div class="bc-area-label al-tech">Technology &amp; Infrastructure</div>
+          <div class="bc-name">Raffaele Scotti</div>
+          <div class="bc-title">Director, Centralized Services · Seton Collaborative</div>
+          <div class="bc-chips">
+            <span class="bc-chip">Cybersecurity</span>
+            <span class="bc-chip">Network Management</span>
+            <span class="bc-chip">Microsoft 365</span>
+            <span class="bc-chip">Managed IT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bc-body">
+      <div class="bio-placeholder">
+        <div class="bp-label">📝 Raffaele's Bio Goes Here</div>
+        <p>His background in technology, his role at Seton Collaborative, what the technology assessment and managed services program delivers, and why parishes need this kind of consistent expert support. Add when ready.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Coming Soon</div>
+  <h2>Areas in Development</h2>
+
+  <p>The Data and Youth Ministry areas of support are being built out now. Team leads will be introduced as those areas come online.</p>
+
+  <!-- ── DATA ── -->
+  <div class="bio-card coming-soon">
+    <div class="bc-header">
+      <div class="bc-color-bar bc-color-data"></div>
+      <div class="bc-header-inner">
+        <div class="bc-avatar av-data">?</div>
+        <div class="bc-name-block">
+          <div class="bc-area-label" style="color: var(--data);">Data &amp; Reporting</div>
+          <div class="bc-name">Team Lead</div>
+          <div class="bc-title">Data &amp; Reporting Specialist · Seton Collaborative</div>
+        </div>
+        <span class="coming-badge">Coming Soon</span>
+      </div>
+    </div>
+    <div class="bc-body">
+      <p style="color: var(--text-light); font-style: italic; font-size: 13px;">Parish health data, giving trends, attendance patterns, and formation enrollment — organized into a clear picture that supports informed pastoral decisions. Team lead to be announced.</p>
+    </div>
+  </div>
+
+  <!-- ── YOUTH ── -->
+  <div class="bio-card coming-soon">
+    <div class="bc-header">
+      <div class="bc-color-bar bc-color-youth"></div>
+      <div class="bc-header-inner">
+        <div class="bc-avatar av-youth">?</div>
+        <div class="bc-name-block">
+          <div class="bc-area-label" style="color: var(--youth);">Youth Ministry</div>
+          <div class="bc-name">Team Lead</div>
+          <div class="bc-title">Youth &amp; Young Adult Ministry Specialist · Seton Collaborative</div>
+        </div>
+        <span class="coming-badge">Coming Soon</span>
+      </div>
+    </div>
+    <div class="bc-body">
+      <p style="color: var(--text-light); font-style: italic; font-size: 13px;">Strategic support for youth and young adult ministry — programming, communications for young people, and the connections that help youth ministers stop working in isolation. Team lead to be announced.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  <strong>Pilot Parish Initiative</strong> · Seton Collaborative · Diocese of Bridgeport · April 2026
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SetonTech — Parish Technology Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-mid: #243460;
+    --teal: #1a6b72;
+    --teal-light: #e0f0f1;
+    --gold: #b8953a;
+    --gold-light: #f0e4c4;
+    --warm-white: #faf8f4;
+    --text: #2c2c2c;
+    --text-light: #5a5a5a;
+    --rule: #d4c9b0;
+    --red-soft: #8b1a1a;
+    --red-bg: #fdf0f0;
+    --green-soft: #1a5c2a;
+    --green-bg: #f0faf2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--navy);
+    color: white;
+    padding: 80px 60px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom right, rgba(26,107,114,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cover-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .brand-chip {
+    background: var(--teal);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  .cover-eyebrow span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 24px;
+  }
+
+  .cover h1 em {
+    font-style: italic;
+    color: var(--teal-light);
+  }
+
+  .cover-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+  }
+
+  /* PRICE HERO */
+  .price-hero {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 20px 32px;
+    margin-bottom: 20px;
+  }
+
+  .price-hero .dollar {
+    font-size: 28px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .price-hero .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1;
+    color: white;
+  }
+
+  .price-hero .per {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    align-self: flex-end;
+    padding-bottom: 8px;
+  }
+
+  .price-label {
+    display: block;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+
+  .cover-meta-item {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .cover-meta-item strong {
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-top: 4px;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 32px;
+  }
+
+  p {
+    color: var(--text);
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 52px 0;
+  }
+
+  /* REALITY CHECK BLOCK */
+  .reality-block {
+    background: var(--red-bg);
+    border-left: 4px solid var(--red-soft);
+    border-radius: 0 4px 4px 0;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .reality-block .rb-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red-soft);
+    margin-bottom: 12px;
+  }
+
+  .reality-block p {
+    color: #4a1010;
+    margin: 0;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* PAIN POINTS GRID */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .pain-card {
+    background: white;
+    border: 1px solid #e8ddd0;
+    border-radius: 6px;
+    padding: 22px 20px;
+  }
+
+  .pain-card .pain-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .pain-card h4 {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .pain-card p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+
+  /* ASSESSMENT SECTION */
+  .assessment-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+
+  .assess-row {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .assess-row:last-child { border-bottom: none; }
+
+  .assess-label {
+    background: var(--navy);
+    color: white;
+    padding: 20px 24px;
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .assess-label .al-icon { font-size: 22px; margin-bottom: 6px; }
+  .assess-label h4 { font-size: 13px; font-weight: 700; line-height: 1.3; }
+
+  .assess-checks {
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+  }
+
+  .check-item {
+    font-size: 12px;
+    color: var(--text);
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 4px 12px;
+    white-space: nowrap;
+  }
+
+  /* STANDARD TIER */
+  .standard-block {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 40px;
+    margin: 32px 0;
+    color: white;
+  }
+
+  .standard-block .sb-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 14px;
+  }
+
+  .standard-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .standard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .standard-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .si-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .standard-item p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+
+  .standard-item p strong { color: white; }
+
+  /* VALUE COMPARISON */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+  }
+
+  .compare-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .compare-table th:first-child { background: #f0ece4; color: var(--text-light); }
+  .compare-table th.col-old { background: #f5e8e8; color: var(--red-soft); }
+  .compare-table th.col-new { background: var(--navy); color: white; }
+
+  .compare-table td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13px;
+    vertical-align: top;
+  }
+
+  .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+  .compare-table td.col-old { color: var(--red-soft); background: rgba(139,26,26,0.03); }
+  .compare-table td.col-new { color: var(--green-soft); background: rgba(26,92,42,0.04); font-weight: 600; }
+
+  .x-mark { color: #c0392b; font-weight: 700; }
+  .check-mark { color: #1a5c2a; font-weight: 700; }
+
+  /* MANAGED SERVICE BREAKDOWN */
+  .service-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+
+  .si-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px;
+    background: white;
+  }
+
+  .si-card .sic-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+
+  .si-card h4 {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .si-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .si-card ul li {
+    font-size: 12px;
+    color: var(--text-light);
+    padding: 4px 0 4px 16px;
+    position: relative;
+    border-bottom: 1px solid #f0ece4;
+  }
+
+  .si-card ul li:last-child { border-bottom: none; }
+
+  .si-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 700;
+    top: 5px;
+  }
+
+  /* PRICE BREAKDOWN */
+  .price-box {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 40px;
+    margin: 32px 0;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .price-main {
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding-right: 48px;
+    flex-shrink: 0;
+  }
+
+  .price-main .pm-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+
+  .price-main .pm-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 500;
+    color: white;
+    line-height: 1;
+    display: block;
+  }
+
+  .price-main .pm-dollar {
+    font-size: 30px;
+    font-weight: 300;
+    vertical-align: super;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .price-main .pm-per {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .price-detail {
+    flex: 1;
+  }
+
+  .price-detail h4 {
+    font-weight: 700;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .price-line:last-child { border-bottom: none; }
+  .price-line .pl-amount { color: white; font-weight: 600; white-space: nowrap; }
+  .price-line.total {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* PROCESS STEPS */
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 28px 0;
+  }
+
+  .process-step {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .process-step:last-child { border-bottom: none; }
+
+  .ps-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .ps-content h4 {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .ps-content p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  .ps-content .ps-time {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--teal);
+    color: white;
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin: 32px 0;
+  }
+
+  .callout .cl-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 12px;
+  }
+
+  .callout p {
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .callout strong { color: white; }
+
+  /* STAT STRIP */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 32px 0;
+  }
+
+  .stat-item {
+    padding: 24px 20px;
+    text-align: center;
+    border-right: 1px solid var(--rule);
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-item .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-item .stat-label {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  /* FOOTER */
+  .doc-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 24px 40px;
+    font-size: 12px;
+    margin-top: 80px;
+  }
+
+  .doc-footer strong { color: white; }
+
+  @media (max-width: 650px) {
+    .cover { padding: 48px 24px; }
+    .cover h1 { font-size: 36px; }
+    .content { padding: 40px 20px; }
+    .pain-grid, .standard-grid, .service-includes { grid-template-columns: 1fr; }
+    .stat-strip { grid-template-columns: 1fr 1fr; }
+    .price-box { flex-direction: column; }
+    .price-main { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-right: 0; padding-bottom: 32px; }
+    .assess-label { width: 140px; }
+    .cover-meta { flex-direction: column; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-eyebrow">
+    <span class="brand-chip">SetonTech</span>
+    <span>Diocese of Bridgeport · Pilot Parish Program</span>
+  </div>
+  <h1>Your Parish Deserves <em>Technology That Works</em></h1>
+  <p class="cover-sub">A complete technology assessment, a clear path to diocesan standards, and ongoing remote management — so your team can focus on ministry, not broken systems.</p>
+
+  <div class="price-hero">
+    <span class="dollar">$</span>
+    <span class="amount">165</span>
+    <span class="per">/ month, ongoing</span>
+  </div>
+  <span class="price-label">Full remote managed IT — after one-time assessment and remediation</span>
+
+  <div class="cover-meta">
+    <div class="cover-meta-item">Program<strong>Pilot Parish Initiative</strong></div>
+    <div class="cover-meta-item">Lead<strong>Raffaele Scotti, SetonTech</strong></div>
+    <div class="cover-meta-item">Diocese<strong>Bridgeport</strong></div>
+    <div class="cover-meta-item">Version<strong>April 2026</strong></div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- THE PROBLEM -->
+  <div class="section">
+    <div class="section-label">The Reality</div>
+    <h2>Most Parish Technology Is a Liability, Not an Asset</h2>
+
+    <p>Pastors don't go into ministry to manage network switches and software licenses. But right now, in most parishes, outdated and unmanaged technology is quietly creating real risk — security vulnerabilities, compliance gaps, slow systems, and staff who waste hours on problems that should never happen.</p>
+
+    <div class="reality-block">
+      <div class="rb-label">The Hard Truth</div>
+      <p>Catholic institutions are <strong>increasingly targeted by ransomware and phishing attacks</strong>. An unpatched system, a weak password policy, or an unmonitored network is not a minor inconvenience — it is an open door. A single breach can cost a parish tens of thousands of dollars and months of disruption. Most small parishes have no one who knows this is happening.</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-icon">🔓</span>
+        <h4>Security Gaps</h4>
+        <p>Unpatched systems, weak passwords, no multi-factor authentication. Phishing attacks land because there's no filter or training in place.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">📡</span>
+        <h4>WiFi That Fails</h4>
+        <p>Consumer-grade routers covering a building designed for enterprise equipment. Dead zones, dropped connections, no separation between staff and guests.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🖥️</span>
+        <h4>Aging Hardware</h4>
+        <p>Computers running outdated operating systems that no longer receive security updates. Hardware that fails at the worst possible moment.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">📋</span>
+        <h4>No Compliance</h4>
+        <p>Diocesan standards for Microsoft 365 and data handling exist — but without help, most parishes don't know where they stand or how to get there.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">💾</span>
+        <h4>No Backup Strategy</h4>
+        <p>Parish records, financial files, and donor data sitting on a single machine with no backup. One failure and years of records are gone.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🆘</span>
+        <h4>No One to Call</h4>
+        <p>When something breaks, staff scramble, wait for a volunteer who knows technology, or pay an emergency rate to a local repair shop — with no continuity of care.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- THE ASSESSMENT -->
+  <div class="section">
+    <div class="section-label">Step One</div>
+    <h2>The Technology Assessment</h2>
+
+    <p>Before we can fix anything, we need an honest picture of where the parish stands. The SetonTech assessment covers every layer of your technology environment — not to create a report that sits in a drawer, but to build a concrete remediation plan with real costs and a realistic timeline.</p>
+
+    <div class="assessment-areas">
+      <div class="assess-row">
+        <div class="assess-label">
+          <div class="al-icon">🔐</div>
+          <h4>Cybersecurity</h4>
+        </div>
+        <div class="assess-checks">
+          <span class="check-item">MFA status</span>
+          <span class="check-item">Password policy</span>
+          <span class="check-item">Phishing exposure</span>
+          <span class="check-item">Antivirus/EDR</span>
+          <span class="check-item">Admin account hygiene</span>
+          <span class="check-item">Email security (SPF/DKIM/DMARC)</span>
+          <span class="check-item">Data access controls</span>
+        </div>
+      </div>
+      <div class="assess-row">
+        <div class="assess-label">
+          <div class="al-icon">📡</div>
+          <h4>Network & WiFi</h4>
+        </div>
+        <div class="assess-checks">
+          <span class="check-item">Router/switch age & model</span>
+          <span class="check-item">Coverage mapping</span>
+          <span class="check-item">Guest vs. staff separation</span>
+          <span class="check-item">Bandwidth capacity</span>
+          <span class="check-item">ISP plan review</span>
+          <span class="check-item">Network documentation</span>
+        </div>
+      </div>
+      <div class="assess-row">
+        <div class="assess-label">
+          <div class="al-icon">🖥️</div>
+          <h4>Devices & Desktop</h4>
+        </div>
+        <div class="assess-checks">
+          <span class="check-item">Hardware inventory</span>
+          <span class="check-item">OS version & patch status</span>
+          <span class="check-item">End-of-life hardware</span>
+          <span class="check-item">Software licensing</span>
+          <span class="check-item">Printer/peripherals</span>
+          <span class="check-item">Remote access setup</span>
+        </div>
+      </div>
+      <div class="assess-row">
+        <div class="assess-label">
+          <div class="al-icon">☁️</div>
+          <h4>Microsoft 365</h4>
+        </div>
+        <div class="assess-checks">
+          <span class="check-item">Licensing tier</span>
+          <span class="check-item">Account configuration</span>
+          <span class="check-item">Email migration status</span>
+          <span class="check-item">OneDrive/SharePoint use</span>
+          <span class="check-item">Teams adoption</span>
+          <span class="check-item">Diocesan compliance gaps</span>
+        </div>
+      </div>
+      <div class="assess-row">
+        <div class="assess-label">
+          <div class="al-icon">💾</div>
+          <h4>Backup & Recovery</h4>
+        </div>
+        <div class="assess-checks">
+          <span class="check-item">Backup solution in place?</span>
+          <span class="check-item">Last verified restore</span>
+          <span class="check-item">Local vs. cloud backup</span>
+          <span class="check-item">Critical data identified</span>
+          <span class="check-item">Recovery time objective</span>
+        </div>
+      </div>
+    </div>
+
+    <p>The assessment produces a written report with a prioritized remediation list — organized by urgency (fix now), importance (fix soon), and optimization (fix when budget allows). No jargon. No fluff. A clear document the pastor can read and act on.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- THE STANDARD -->
+  <div class="section">
+    <div class="section-label">Step Two</div>
+    <h2>Bring the Parish to Standard</h2>
+
+    <p>After the assessment, we build a remediation plan. This is the work that gets the parish to a consistent, defensible baseline — aligned with diocesan technology standards and ready for ongoing remote management.</p>
+
+    <div class="standard-block">
+      <div class="sb-label">The SetonTech Parish Standard</div>
+      <h3>What Every Parish Should Have — And Will Have</h3>
+
+      <div class="standard-grid">
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Microsoft 365 Business Standard</strong> across all staff accounts — email, calendar, Teams, OneDrive, and Office apps fully configured</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Multi-factor authentication</strong> enabled on every account — the single highest-impact security step available</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Managed WiFi</strong> with proper business-grade equipment — staff and guest networks separated, full building coverage</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Automated patch management</strong> — Windows updates, software patches, and driver updates handled without staff involvement</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Cloud backup</strong> for critical parish data — automated, verified, and recoverable within hours not days</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Email security</strong> — SPF, DKIM, and DMARC records configured; phishing protection active; parish emails that don't go to spam</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Endpoint protection</strong> on all devices — managed antivirus/EDR, not consumer software purchased at a big box store</p>
+        </div>
+        <div class="standard-item">
+          <div class="si-check">✓</div>
+          <p><strong>Diocesan compliance documentation</strong> — a written record of standards met, available for diocesan review at any time</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- MANAGED SERVICE -->
+  <div class="section">
+    <div class="section-label">Step Three</div>
+    <h2>Ongoing Managed Support — $165 / Month</h2>
+
+    <p>Once the parish is at standard, we keep it there. $165 per month is full remote IT management — the kind of coverage that would cost a parish thousands of dollars a month to replicate any other way. Here's exactly what that covers:</p>
+
+    <div class="service-includes">
+      <div class="si-card">
+        <span class="sic-icon">🛡️</span>
+        <h4>Patch Management</h4>
+        <ul>
+          <li>Monthly Windows updates managed and verified</li>
+          <li>Third-party software patching</li>
+          <li>Security patches prioritized and deployed rapidly</li>
+          <li>Monthly patch compliance report</li>
+        </ul>
+      </div>
+      <div class="si-card">
+        <span class="sic-icon">📊</span>
+        <h4>Remote Monitoring</h4>
+        <ul>
+          <li>24/7 system health monitoring</li>
+          <li>Disk space and hardware alerts</li>
+          <li>Network uptime monitoring</li>
+          <li>Proactive response before things fail</li>
+        </ul>
+      </div>
+      <div class="si-card">
+        <span class="sic-icon">☁️</span>
+        <h4>Microsoft 365 Management</h4>
+        <ul>
+          <li>User account add/remove/modify</li>
+          <li>License management</li>
+          <li>Security policy updates</li>
+          <li>Ongoing diocesan compliance alignment</li>
+        </ul>
+      </div>
+      <div class="si-card">
+        <span class="sic-icon">🎧</span>
+        <h4>Remote Help Desk</h4>
+        <ul>
+          <li>Staff support via phone and remote session</li>
+          <li>Password resets, software issues, "how do I" questions</li>
+          <li>Same-business-day response on standard issues</li>
+          <li>Priority response for critical outages</li>
+        </ul>
+      </div>
+      <div class="si-card">
+        <span class="sic-icon">💾</span>
+        <h4>Backup Verification</h4>
+        <ul>
+          <li>Monthly backup health check</li>
+          <li>Verified restore testing quarterly</li>
+          <li>Alert on backup failures same day</li>
+          <li>Incident response coordination</li>
+        </ul>
+      </div>
+      <div class="si-card">
+        <span class="sic-icon">📋</span>
+        <h4>Quarterly Review</h4>
+        <ul>
+          <li>Technology health summary for pastor</li>
+          <li>Hardware replacement planning</li>
+          <li>Upcoming needs and budget guidance</li>
+          <li>Standards compliance update</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- WHAT IT REPLACES -->
+  <div class="section">
+    <div class="section-label">The Value</div>
+    <h2>What $165/Month Actually Replaces</h2>
+
+    <p>The question isn't whether $165 a month is affordable. The question is what a parish is currently paying — in time, in risk, and in emergency repair costs — to have none of this in place.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th class="col-old">Without SetonTech</th>
+          <th class="col-new">With SetonTech</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>System gets hit with ransomware</td>
+          <td class="col-old">$10,000–$50,000+ in recovery costs, data loss, downtime</td>
+          <td class="col-new">Patching, MFA, and monitoring dramatically reduce risk. Response plan ready if it happens.</td>
+        </tr>
+        <tr>
+          <td>Staff computer crashes</td>
+          <td class="col-old">Emergency repair at $125–200/hr. Weeks without the machine. Data possibly gone.</td>
+          <td class="col-new">Remote diagnosis same day. Backup data intact and restoreable. Hardware plan already in motion.</td>
+        </tr>
+        <tr>
+          <td>New staff member starts</td>
+          <td class="col-old">Someone cobbles together login credentials. Months before they have proper access.</td>
+          <td class="col-new">Account provisioned remotely in under an hour. Microsoft 365 ready to go on day one.</td>
+        </tr>
+        <tr>
+          <td>Windows update causes problem</td>
+          <td class="col-old">Volunteer who knows computers comes in on Saturday. Or nothing happens for months.</td>
+          <td class="col-new">Monitored and managed. Issue flagged before it becomes a problem. Fixed remotely.</td>
+        </tr>
+        <tr>
+          <td>Diocese requests compliance documentation</td>
+          <td class="col-old">No documentation exists. Scramble to figure out what's even installed.</td>
+          <td class="col-new">Report ready. Standards already met. Response takes 10 minutes.</td>
+        </tr>
+        <tr>
+          <td>IT support cost, annualized</td>
+          <td class="col-old">$2,000–$8,000/year in reactive, inconsistent break-fix costs</td>
+          <td class="col-new"><strong>$1,980/year</strong> — proactive, consistent, documented</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="stat-strip">
+      <div class="stat-item">
+        <span class="stat-num">$165</span>
+        <span class="stat-label">per month, full managed IT</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">system monitoring, always on</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">0</span>
+        <span class="stat-label">staff hours spent on IT management</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1</span>
+        <span class="stat-label">number to call when anything goes wrong</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="section-label">The Process</div>
+    <h2>How We Get You There</h2>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="ps-num">1</div>
+        <div class="ps-content">
+          <div class="ps-time">Week 1–2</div>
+          <h4>On-Site Technology Assessment</h4>
+          <p>Raffaele and the SetonTech team visit the parish. We assess every layer — cybersecurity, network, hardware, Microsoft 365, backup. No assumptions. We look at what's actually there. A written report with prioritized findings follows within five business days.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">2</div>
+        <div class="ps-content">
+          <div class="ps-time">Week 2–3</div>
+          <h4>Remediation Plan & Budget</h4>
+          <p>We present the findings and a concrete plan — what needs to be fixed, in what order, and what it will cost. We separate what we handle remotely (included) from what requires hardware investment. The pastor sees a clear picture before committing to anything.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">3</div>
+        <div class="ps-content">
+          <div class="ps-time">Weeks 3–8</div>
+          <h4>Remediation & Build-Out</h4>
+          <p>We execute the plan. Microsoft 365 migration, WiFi upgrades, patch management deployment, backup configuration, security hardening. We do the work — in the background, minimizing disruption to staff. You don't need to understand how it works. It just works.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">4</div>
+        <div class="ps-content">
+          <div class="ps-time">Ongoing</div>
+          <h4>Remote Managed Services Begin</h4>
+          <p>Once the parish is at standard, monthly managed services engage at $165/month. Monitoring is live. Patch management is active. Staff know who to call. The parish is no longer a technology liability — it's a technology baseline everyone can build on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PRICE BREAKDOWN -->
+  <div class="section">
+    <div class="section-label">Pricing</div>
+    <h2>Simple and Transparent</h2>
+
+    <p>There are two components: the one-time assessment and remediation (variable, based on what we find), and the ongoing managed services subscription. No hidden fees. No surprise invoices.</p>
+
+    <div class="price-box">
+      <div class="price-main">
+        <div class="pm-label">Monthly Managed Services</div>
+        <span class="pm-amount"><span class="pm-dollar">$</span>165</span>
+        <span class="pm-per">per month · after remediation complete</span>
+      </div>
+      <div class="price-detail">
+        <h4>What's included at $165/month:</h4>
+        <div class="price-line">
+          <span>Remote monitoring (24/7)</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line">
+          <span>Patch management</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line">
+          <span>Microsoft 365 management</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line">
+          <span>Remote help desk (staff support)</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line">
+          <span>Backup monitoring & verification</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line">
+          <span>Quarterly review report</span>
+          <span class="pl-amount">✓ Included</span>
+        </div>
+        <div class="price-line total">
+          <span>On-site visits for hardware issues</span>
+          <span class="pl-amount">Quoted separately</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:13px; color: var(--text-light);">Assessment and remediation costs are quoted after the initial assessment based on what we find. Hardware upgrades (WiFi equipment, replacement computers) are quoted at cost with no markup. We will never recommend hardware you don't need.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CLOSING -->
+  <div class="section">
+    <div class="section-label">The Bottom Line</div>
+    <h2>Technology That Serves the Mission</h2>
+
+    <div class="callout">
+      <div class="cl-label">Why This Matters</div>
+      <p>A parish that is <strong>secure, connected, and running clean systems</strong> is a parish where staff spend their time on ministry — not troubleshooting. Where records are safe. Where the pastor isn't one ransomware attack away from a crisis. SetonTech doesn't exist to sell technology. It exists to remove technology as a barrier to mission — so your people can focus on what they came here to do.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  <strong>SetonTech</strong> · A Service of Seton Collaborative · Diocese of Bridgeport · tech.setoncollaborative.org · April 2026
+</div>
+
+</body>
+</html>

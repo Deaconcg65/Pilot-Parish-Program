@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parish Communications Strategy | Seton Collaborative</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --gold: #b8953a;
+    --gold-light: #f0e4c4;
+    --gold-mid: #d4a93e;
+    --warm-white: #faf8f4;
+    --text: #2c2c2c;
+    --text-light: #5a5a5a;
+    --rule: #d4c9b0;
+    --burgundy: #6b1f2a;
+    --burgundy-bg: #fdf4f5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    background: var(--navy);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(184,149,58,0.12) 100%);
+  }
+
+  .cover-rule { width: 56px; height: 3px; background: var(--gold); margin-bottom: 32px; }
+
+  .cover-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1.12;
+    max-width: 680px;
+    margin-bottom: 24px;
+  }
+
+  .cover h1 em { font-style: italic; color: #c8d8e8; }
+
+  .cover-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.62);
+    max-width: 540px;
+    line-height: 1.75;
+    margin-bottom: 60px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .cover-meta-item { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; }
+  .cover-meta-item strong { display: block; color: white; font-size: 13px; font-weight: 600; letter-spacing: 0; text-transform: none; margin-top: 4px; }
+
+  /* ─── CONTENT ─── */
+  .content { max-width: 880px; margin: 0 auto; padding: 64px 40px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 36px;
+  }
+
+  p { color: var(--text); margin-bottom: 16px; max-width: 700px; }
+
+  .divider { border: none; border-top: 1px solid var(--rule); margin: 56px 0; }
+
+  /* ─── PROVOCATION BLOCK ─── */
+  .provocation {
+    background: var(--navy);
+    border-radius: 6px;
+    padding: 48px 52px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .provocation::after {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 220px;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .provocation .prov-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .provocation blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+    line-height: 1.55;
+    max-width: 680px;
+    margin-bottom: 24px;
+  }
+
+  .provocation p {
+    color: rgba(255,255,255,0.65);
+    font-size: 15px;
+    max-width: 640px;
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  /* ─── PRESENCE VS STRATEGY TABLE ─── */
+  .pvs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+  }
+
+  .pvs-table th {
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .pvs-table th.col-presence { background: #ede8df; color: var(--text-light); }
+  .pvs-table th.col-strategy { background: var(--navy); color: white; }
+
+  .pvs-table td {
+    padding: 13px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  .pvs-table td.col-presence { background: #f7f3ed; color: var(--text-light); font-style: italic; }
+  .pvs-table td.col-strategy { background: #f0f4ed; color: #1a3d10; font-weight: 600; }
+
+  /* ─── JOURNEY ─── */
+  .journey {
+    display: flex;
+    align-items: stretch;
+    margin: 32px 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .journey-step {
+    flex: 1;
+    text-align: center;
+    padding: 18px 6px;
+    min-width: 80px;
+  }
+
+  .journey-step.s1 { background: #e4e9f4; }
+  .journey-step.s2 { background: #c9d4e9; }
+  .journey-step.s3 { background: #aebfde; }
+  .journey-step.s4 { background: #93aad3; }
+  .journey-step.s5 { background: #6688be; }
+  .journey-step.s6 { background: #3d67aa; }
+  .journey-step.s7 { background: var(--navy); color: white; }
+
+  .journey-step .sn { font-size: 10px; font-weight: 700; letter-spacing: 1px; opacity: 0.55; margin-bottom: 5px; }
+  .journey-step .sl { font-size: 11px; font-weight: 700; line-height: 1.3; }
+
+  /* ─── THREE DIMENSIONS ─── */
+  .dimension-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+
+  .dim-row {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .dim-row:last-child { border-bottom: none; }
+
+  .dim-badge {
+    background: var(--navy);
+    color: white;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .dim-content { padding: 20px 24px; flex: 1; }
+
+  .dim-content h4 {
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .dim-content p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .dim-content .dim-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--navy);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* ─── DIM 1: ENGAGEMENT SEGMENTS ─── */
+  .seg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .seg-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 22px 22px 18px;
+    background: white;
+    position: relative;
+  }
+
+  .seg-card .seg-num {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .seg-card h4 { font-weight: 700; font-size: 14px; color: var(--navy); margin-bottom: 3px; }
+  .seg-card .seg-who { font-size: 12px; color: var(--text-light); margin-bottom: 12px; font-style: italic; }
+
+  .seg-card .seg-goal-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .seg-card .seg-goal { font-size: 13px; color: var(--text); line-height: 1.55; }
+
+  .seg-card .seg-danger {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--burgundy);
+  }
+
+  .seg-card .seg-danger strong { font-weight: 700; }
+
+  /* ─── DIM 2: LIFE STAGE ─── */
+  .lifestage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 24px 0;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .ls-row {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ls-row:last-child { border-bottom: none; }
+
+  .ls-stage {
+    width: 190px;
+    flex-shrink: 0;
+    padding: 16px 20px;
+    background: #f0ece4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ls-stage .ls-name { font-weight: 700; font-size: 13px; color: var(--navy); }
+  .ls-stage .ls-sub { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+
+  .ls-driver {
+    flex: 1;
+    padding: 16px 20px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .ls-driver .lsd-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; display: block; }
+  .ls-driver p { font-size: 13px; color: var(--text); margin: 0; max-width: 100%; line-height: 1.5; }
+
+  .ls-comms {
+    width: 220px;
+    flex-shrink: 0;
+    padding: 16px 20px;
+    background: white;
+  }
+
+  .ls-comms .lsc-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; display: block; }
+  .ls-comms p { font-size: 12px; color: var(--text-light); margin: 0; max-width: 100%; line-height: 1.5; font-style: italic; }
+
+  /* ─── DIM 3: FAITH TYPE ─── */
+  .faith-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin: 28px 0;
+  }
+
+  .faith-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px 14px;
+    text-align: center;
+    background: white;
+  }
+
+  .faith-card .fi { font-size: 26px; margin-bottom: 10px; display: block; }
+  .faith-card h4 { font-weight: 700; font-size: 12px; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+  .faith-card p { font-size: 11px; color: var(--text-light); margin: 0; max-width: 100%; line-height: 1.5; }
+
+  /* ─── INTERSECTION CALLOUT ─── */
+  .intersection {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .intersection .int-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .intersection p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .intersection p strong { font-style: normal; }
+
+  /* ─── EXAMPLE BOX ─── */
+  .example-box {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin: 24px 0;
+  }
+
+  .example-box .ex-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+
+  .example-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .example-row:last-child { margin-bottom: 0; }
+
+  .ex-tag {
+    background: var(--navy);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  .example-row p { font-size: 13px; color: var(--text); margin: 0; max-width: 100%; line-height: 1.6; }
+
+  /* ─── OUTCOMES TABLE ─── */
+  .outcomes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .outcomes-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .outcomes-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13px;
+    vertical-align: top;
+  }
+
+  .outcomes-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+  .tag {
+    display: inline-block;
+    background: var(--gold-light);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* ─── THREE-LAYER OFFERING ─── */
+  .offering-layers {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+
+  .offering-layer {
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .offering-layer:last-child { border-bottom: none; }
+
+  .layer-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .layer-content h4 { font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .layer-content p { font-size: 13px; color: var(--text-light); margin: 0; max-width: 100%; }
+
+  /* ─── TRAINING AGENDA ─── */
+  .agenda { margin: 28px 0; }
+
+  .agenda-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .agenda-item:last-child { border-bottom: none; }
+
+  .agenda-time { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; padding-top: 2px; min-width: 70px; }
+  .agenda-content h4 { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 4px; }
+  .agenda-content p { font-size: 13px; color: var(--text-light); margin: 0; max-width: 100%; }
+
+  /* ─── TRAINING-ETTES ─── */
+  .trainings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .training-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 20px 22px;
+    background: white;
+  }
+
+  .training-card .t-num { font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .training-card h4 { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 6px; line-height: 1.3; }
+  .training-card p { font-size: 12px; color: var(--text-light); margin: 0; max-width: 100%; line-height: 1.55; }
+  .training-card .t-tag { margin-top: 10px; }
+
+  /* ─── DARK CALLOUT ─── */
+  .callout {
+    background: var(--navy);
+    color: white;
+    border-radius: 6px;
+    padding: 36px 40px;
+    margin: 36px 0;
+  }
+
+  .callout-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .callout p { color: rgba(255,255,255,0.82); font-size: 16px; line-height: 1.78; max-width: 100%; margin: 0; }
+  .callout strong { color: white; }
+
+  /* ─── FOOTER ─── */
+  .doc-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 24px 40px;
+    font-size: 12px;
+    margin-top: 80px;
+  }
+
+  .doc-footer strong { color: white; }
+
+  @media (max-width: 680px) {
+    .cover { padding: 48px 24px; }
+    .cover h1 { font-size: 36px; }
+    .content { padding: 40px 20px; }
+    .seg-grid, .trainings-grid { grid-template-columns: 1fr; }
+    .faith-grid { grid-template-columns: 1fr 1fr; }
+    .ls-comms { display: none; }
+    .ls-stage { width: 140px; }
+    .cover-meta { flex-direction: column; gap: 20px; }
+    .journey { display: none; }
+    .provocation { padding: 32px 28px; }
+    .provocation blockquote { font-size: 20px; }
+  }
+
+  /* ── ROGER BREAKOUT ── */
+  .roger-breakout {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    margin: 32px 0;
+  }
+
+  .rb-left { flex-shrink: 0; }
+
+  .rb-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(184,149,58,0.25);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  .rb-right { flex: 1; }
+
+  .rb-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .rb-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  .rb-title {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+
+  .rb-bio {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .rb-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .rb-chip {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(184,149,58,0.35);
+    color: rgba(184,149,58,0.85);
+  }
+
+  /* ── WEB SCENARIOS ── */
+  .scenario-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 28px 0;
+  }
+
+  .scenario-card {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: white;
+  }
+
+  .scenario-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--rule);
+    background: #f7f3ec;
+  }
+
+  .sc-scenario-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .scenario-header h4 {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--navy);
+    flex: 1;
+  }
+
+  .scenario-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .st-red    { background: #fde8e8; color: #8b1a1a; }
+  .st-amber  { background: #fdf3e0; color: #7a4a00; }
+  .st-green  { background: #e8f5e8; color: #1a5c1a; }
+  .st-blue   { background: #e8eef8; color: #1a2f6b; }
+
+  .scenario-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .sb-col {
+    padding: 18px 20px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .sb-col:last-child { border-right: none; }
+
+  .sb-col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+
+  .sb-col p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .sb-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sb-col ul li {
+    font-size: 12px;
+    color: var(--text);
+    padding: 4px 0 4px 14px;
+    position: relative;
+    line-height: 1.4;
+    border-bottom: 1px solid #f0ece4;
+  }
+
+  .sb-col ul li:last-child { border-bottom: none; }
+
+  .sb-col ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 5px;
+  }
+
+  .scenario-footer {
+    padding: 12px 22px;
+    background: var(--navy);
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .scenario-footer strong { color: white; }
+  .scenario-footer .sf-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 680px) {
+    .roger-breakout { flex-direction: column; }
+    .scenario-body { grid-template-columns: 1fr; }
+    .sb-col { border-right: none; border-bottom: 1px solid var(--rule); }
+    .sb-col:last-child { border-bottom: none; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-rule"></div>
+  <div class="cover-label">Seton Collaborative · Pilot Parish Initiative</div>
+  <h1>A Parish Communications Strategy<br><em>That Actually Works</em></h1>
+  <p class="cover-sub">Most parishes have a communications presence. Very few have a communications strategy. This document explains the difference — and what it takes to build one that moves people toward deeper faith and fuller participation in parish life.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">Prepared by<strong>Chris Greer / Roger Rybkowski</strong></div>
+    <div class="cover-meta-item">Program<strong>Pilot Parish Intervention</strong></div>
+    <div class="cover-meta-item">Diocese<strong>Bridgeport</strong></div>
+    <div class="cover-meta-item">Version<strong>April 2026</strong></div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- ─── PROVOCATION ─── -->
+  <div class="section">
+    <div class="section-label">Before We Begin</div>
+    <h2>Presence Is Not Strategy</h2>
+
+    <div class="provocation">
+      <div class="prov-label">An Honest Question</div>
+      <blockquote>"We have a website. We publish a bulletin every week. We make announcements at Mass. We have a sign out front. What else do we need?"</blockquote>
+      <p>This is the most common answer a parish gives when asked about communications. And it is a completely understandable one. It is also, with respect, a description of the bare minimum required to prove you exist — not a plan for reaching people, growing a community, or advancing the mission of the Church.</p>
+    </div>
+
+    <p>A website tells people you're open. A bulletin tells the people already there what's happening next week. An announcement at the ambo tells the people already in the pews what the people already in the pews need to know. These are infrastructure. They are necessary — and they are not enough.</p>
+
+    <p>Here is the honest distinction between presence and strategy:</p>
+
+    <table class="pvs-table">
+      <thead>
+        <tr>
+          <th class="col-presence">Presence says…</th>
+          <th class="col-strategy">Strategy asks…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-presence">"We updated the website."</td>
+          <td class="col-strategy">Did anyone find us who wasn't already looking? What did they do when they got there?</td>
+        </tr>
+        <tr>
+          <td class="col-presence">"The bulletin went out."</td>
+          <td class="col-strategy">Did anyone act on it? What was the one thing we wanted someone to do — and did we make that clear?</td>
+        </tr>
+        <tr>
+          <td class="col-presence">"We made the announcement."</td>
+          <td class="col-strategy">Was that announcement designed for the people in the room, or for the people we wish were in the room?</td>
+        </tr>
+        <tr>
+          <td class="col-presence">"We have social media."</td>
+          <td class="col-strategy">Are we building a relationship with people who haven't decided about us yet — or just narrating events to people who already know?</td>
+        </tr>
+        <tr>
+          <td class="col-presence">"We sent an email."</td>
+          <td class="col-strategy">Who received it? Did they open it? Was it written for them — or written because it was someone's job to send it?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The good news: most parishes are only a framework away from making what they already do far more effective. This document provides that framework.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── THE REAL GOAL ─── -->
+  <div class="section">
+    <div class="section-label">The Foundation</div>
+    <h2>What Communications Is Actually For</h2>
+
+    <p>Every bulletin, every post, every email, every page of your website either advances someone's journey toward deeper faith and fuller participation — or it doesn't. The goal of parish communications is to move people along that spectrum. Not to fill space. Not to check the box. To move people.</p>
+
+    <div class="journey">
+      <div class="journey-step s1"><div class="sn">01</div><div class="sl">Unaware</div></div>
+      <div class="journey-step s2"><div class="sn">02</div><div class="sl">Curious</div></div>
+      <div class="journey-step s3"><div class="sn">03</div><div class="sl">Attending</div></div>
+      <div class="journey-step s4"><div class="sn">04</div><div class="sl">Engaged</div></div>
+      <div class="journey-step s5"><div class="sn">05</div><div class="sl">Giving</div></div>
+      <div class="journey-step s6"><div class="sn">06</div><div class="sl">Serving</div></div>
+      <div class="journey-step s7"><div class="sn">07</div><div class="sl">Inviting</div></div>
+    </div>
+
+    <p>Most parish communications is built for people at steps 3, 4, and 5 — the people already there. The people at steps 1 and 2 rarely appear in a bulletin. And yet that is precisely where parish growth begins.</p>
+
+    <p>The single most important strategic shift any parish can make is to start asking, for every communication: <strong>who is this for, and what step are we trying to move them to?</strong></p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── THREE DIMENSIONS ─── -->
+  <div class="section">
+    <div class="section-label">Know Your Audience</div>
+    <h2>Your Audience Is Not One Group</h2>
+
+    <p>The most common failure in parish communications is writing for a generic "parishioner" who doesn't actually exist. Real parishioners are complex. They sit at different points in their faith journey. They are in different seasons of life. They experience and seek God differently. Effective communications accounts for all three dimensions.</p>
+
+    <div class="dimension-intro">
+      <div class="dim-row">
+        <div class="dim-badge">1</div>
+        <div class="dim-content">
+          <h4>Engagement Level — Where they are in their relationship with the parish</h4>
+          <p>Are they weekly Mass-goers or Christmas-and-Easter? Have they drifted away? Are they looking but haven't walked in yet? Each group requires a different door, a different tone, a different invitation.</p>
+          <span class="dim-q">"How connected is this person right now?"</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-badge">2</div>
+        <div class="dim-content">
+          <h4>Life Stage — Who they are and what they're carrying</h4>
+          <p>A young adult searching for community and a 68-year-old widow are both "active parishioners." They are not the same person. Their needs, their available time, their motivations, and the messages that will reach them are entirely different.</p>
+          <span class="dim-q">"What season of life is shaping what they need right now?"</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-badge">3</div>
+        <div class="dim-content">
+          <h4>Faith Experience Type — How they engage with God and community</h4>
+          <p>Some people are drawn through intellectual formation. Others through devotion and beauty. Others through service and belonging. One message, one channel, one style doesn't reach all of them — and trying to reach all of them equally usually reaches none of them well.</p>
+          <span class="dim-q">"What draws this person deeper?"</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── DIMENSION 1: ENGAGEMENT ─── -->
+  <div class="section">
+    <div class="section-label">Dimension One</div>
+    <h2>Engagement Level — The Six Starting Points</h2>
+
+    <p>These six groups represent where people currently are in their engagement with your parish. They're a starting point for understanding your audience — not a complete picture. The critical insight: <strong>most parish communications is unconsciously designed for the first two groups only.</strong> The people who most need to be reached are in the last four.</p>
+
+    <div class="seg-grid">
+
+      <div class="seg-card">
+        <div class="seg-num">1</div>
+        <h4>The Core Active</h4>
+        <div class="seg-who">Weekly Mass, gives, volunteers, knows everyone</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Deepen engagement. Mobilize them as ambassadors. Equip them to invite others into what they already love.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> Over-communicating to this group at the expense of everyone else.</div>
+      </div>
+
+      <div class="seg-card">
+        <div class="seg-num">2</div>
+        <h4>The Engaged Occasional</h4>
+        <div class="seg-who">2–3x/month, connected but not fully committed</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Create one clear next step — a ministry, a small group, a giving enrollment. Remove the friction between interest and action.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> Assuming they know what you're offering. They often don't.</div>
+      </div>
+
+      <div class="seg-card">
+        <div class="seg-num">3</div>
+        <h4>The Peripheral Believer</h4>
+        <div class="seg-who">Christmas, Easter, sacraments, funerals — and that's mostly it</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Warm, low-pressure, non-guilt-driven invitations to entry points that don't require full commitment. Make coming back feel safe and easy.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> Guilt-based messaging. It accelerates drift, it doesn't reverse it.</div>
+      </div>
+
+      <div class="seg-card">
+        <div class="seg-num">4</div>
+        <h4>The Lapsed Catholic</h4>
+        <div class="seg-who">Former regular, knows the parish, has drifted — often with a reason</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Low-barrier re-entry that isn't Mass. Community events, service opportunities, relationships — not institutional calls to return.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> "Come back to church" messaging. They know where it is. That's not why they left.</div>
+      </div>
+
+      <div class="seg-card">
+        <div class="seg-num">5</div>
+        <h4>The Seeker</h4>
+        <div class="seg-who">New to the area, spiritually curious, exploring — not yet connected anywhere</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Answer the questions they're actually asking: Is this place welcoming? Do people like me come here? Will I be judged? Your website is their first conversation with you.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> Assuming they know anything about Catholic practice. They often don't — and that's not a problem, it's an opportunity.</div>
+      </div>
+
+      <div class="seg-card">
+        <div class="seg-num">6</div>
+        <h4>The Digital Follower</h4>
+        <div class="seg-who">Engages online, watches livestreams, rarely or never in person</div>
+        <span class="seg-goal-label">Communication Goal</span>
+        <div class="seg-goal">Build the relationship digitally first. Identify bridge moments — a Lenten series, a community meal, a service project — that feel like natural reasons to show up in person.</div>
+        <div class="seg-danger"><strong>Watch for:</strong> Ignoring them because they're not in the building. They're listening. Give them something worth hearing.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── DIMENSION 2: LIFE STAGE ─── -->
+  <div class="section">
+    <div class="section-label">Dimension Two</div>
+    <h2>Life Stage — Who They Actually Are</h2>
+
+    <p>Engagement level tells you where someone is. Life stage tells you who they are and what they're carrying. Two "engaged occasional" parishioners might need completely different messages, channels, and entry points based solely on where they are in life. Communications that ignores this ends up feeling generic — because it is.</p>
+
+    <div class="lifestage-list">
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">Young Adults</div>
+          <div class="ls-sub">18–28, often unattached</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>Belonging and authenticity. Faith as identity, not obligation. Community before doctrine. They can smell inauthenticity from a distance.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>Social media, peer invitation, informal gatherings, young adult ministry with real social life attached</p>
+        </div>
+      </div>
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">Young Families</div>
+          <div class="ls-sub">Kids under 10, time-starved</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>Faith formation for their children is the primary hook. They want a parish that makes it easy — for registration, for school, for sacramental prep.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>School connections, simple online registration, email, clear website navigation to RE programs</p>
+        </div>
+      </div>
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">Families with Teens</div>
+          <div class="ls-sub">The drift window</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>Youth ministry quality is everything. This is the most fragile family moment in parish life — teens pulling away, parents either doubling down or quietly checking out alongside them.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>Youth ministry programming, service opportunities, parent engagement events, clear communication about teen programs</p>
+        </div>
+      </div>
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">Empty Nesters</div>
+          <div class="ls-sub">50s–60s, available, capable</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>Meaning and service. Often the most available and financially capable segment in any parish — and the most underutilized. They want to contribute something real, not stuff envelopes.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>Direct personal invitation to leadership and service roles, ministry fair presence, bulletin and email</p>
+        </div>
+      </div>
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">Seniors</div>
+          <div class="ls-sub">70+, active or isolated</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>Faith as anchor, community as lifeline. Some are the most active people in the building. Others are increasingly homebound and at risk of total disconnection. Both need to feel seen.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>Printed bulletin, phone calls, homebound ministry outreach, accessible website, in-person community events</p>
+        </div>
+      </div>
+      <div class="ls-row">
+        <div class="ls-stage">
+          <div class="ls-name">In Transition</div>
+          <div class="ls-sub">Widowed, divorced, grieving, newly arrived</div>
+        </div>
+        <div class="ls-driver">
+          <span class="lsd-label">What drives them</span>
+          <p>This is a specific pastoral moment that most parish communications never addresses. People in major life transitions either go deeper in faith — or disappear. Communications that meets them here is transformative.</p>
+        </div>
+        <div class="ls-comms">
+          <span class="lsc-label">Reach them via</span>
+          <p>Pastoral outreach, grief ministry, welcome programs, direct personal contact — not mass communications</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── DIMENSION 3: FAITH TYPE ─── -->
+  <div class="section">
+    <div class="section-label">Dimension Three</div>
+    <h2>Faith Experience Type — How They Engage</h2>
+
+    <p>Even among people at the same engagement level, in the same life stage, people draw near to God in different ways. A parish that only speaks one "language" of faith will only retain the people who happen to speak that language. Communications that acknowledges this variety — and programs that serve it — builds a more resilient community.</p>
+
+    <div class="faith-grid">
+      <div class="faith-card">
+        <span class="fi">📖</span>
+        <h4>The Intellectual</h4>
+        <p>Wants to understand. Drawn by formation, rich homilies, study groups, and theological depth.</p>
+      </div>
+      <div class="faith-card">
+        <span class="fi">🕯️</span>
+        <h4>The Devotional</h4>
+        <p>Rosary, adoration, novenas. Drawn by beauty, tradition, reverence, and contemplative practice.</p>
+      </div>
+      <div class="faith-card">
+        <span class="fi">🤝</span>
+        <h4>The Servant</h4>
+        <p>Comes alive in action and community. Drawn by service opportunities, outreach, and belonging through doing.</p>
+      </div>
+      <div class="faith-card">
+        <span class="fi">✨</span>
+        <h4>The Seeker</h4>
+        <p>Less doctrinal, more experiential. Drawn by encounter, personal testimony, and felt moments of grace.</p>
+      </div>
+      <div class="faith-card">
+        <span class="fi">⛪</span>
+        <h4>The Cultural Catholic</h4>
+        <p>Identity-connected, not always practice-connected. Sacraments and feast days are anchors, not obligations.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── WHY THE INTERSECTION MATTERS ─── -->
+  <div class="section">
+    <div class="section-label">Putting It Together</div>
+    <h2>The Intersection Is Where Real Communication Lives</h2>
+
+    <div class="intersection">
+      <div class="int-label">The Practical Reality</div>
+      <p>A <strong>Lapsed Catholic</strong> who is a <strong>55-year-old empty nester</strong> and intellectually oriented needs an entirely different message than a Lapsed Catholic who is a <strong>26-year-old young adult</strong> who drifted after college. Same box on the engagement chart. Completely different door.</p>
+    </div>
+
+    <p>You don't need to design a separate communication for every possible combination — that's not practical for any parish. But you do need to ask, for each major communication, who you are primarily writing for and whether it actually speaks to that person's real situation.</p>
+
+    <div class="example-box">
+      <div class="ex-label">What This Looks Like in Practice</div>
+      <div class="example-row">
+        <span class="ex-tag">Event Invite</span>
+        <p>"Join us for our parish mission revival" speaks to the Core Active. "Come for dinner, stay for a conversation about what matters" speaks to the Lapsed and the Seeker. Same event. Different door.</p>
+      </div>
+      <div class="example-row">
+        <span class="ex-tag">Website Hero</span>
+        <p">A homepage that opens with Mass times and the pastor's photo is built for people who already know you. One that opens with "Whether you're returning or just curious, you belong here" is built for people who don't yet.</p>
+      </div>
+      <div class="example-row">
+        <span class="ex-tag">Bulletin</span>
+        <p>A bulletin full of committee meeting schedules is a communication to insiders about insider business. One that leads with one meaningful invitation — specific, timely, with a reason to act — is communications.</p>
+      </div>
+      <div class="example-row">
+        <span class="ex-tag">Social Media</span>
+        <p>A post that announces a date and time reaches people who already care. A post that tells a story — a face, a moment, something real — reaches people who haven't decided yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── REAL OUTCOMES ─── -->
+  <div class="section">
+    <div class="section-label">What Matters</div>
+    <h2>The Outcomes Worth Measuring</h2>
+
+    <p>If your communications is working, you'll see it in places that have nothing to do with how the bulletin looks. These are the signals that tell you whether your investment in communications is advancing the mission — or just maintaining the infrastructure.</p>
+
+    <table class="outcomes-table">
+      <thead>
+        <tr>
+          <th>Outcome</th>
+          <th>How to Measure It</th>
+          <th>Channel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mass attendance trends</strong></td>
+          <td>Weekly headcount tracked over time; year-over-year comparison</td>
+          <td><span class="tag">All</span></td>
+        </tr>
+        <tr>
+          <td><strong>New parishioner registration</strong></td>
+          <td>Monthly new registrations vs. prior year; registration source if trackable</td>
+          <td><span class="tag">Website</span></td>
+        </tr>
+        <tr>
+          <td><strong>Event attendance conversion</strong></td>
+          <td>Announced → registered → attended; which channel drove registrations</td>
+          <td><span class="tag">Bulletin · Email · Social</span></td>
+        </tr>
+        <tr>
+          <td><strong>Faith formation enrollment</strong></td>
+          <td>Total enrollments; year-over-year; grade-level trends</td>
+          <td><span class="tag">Website · Email</span></td>
+        </tr>
+        <tr>
+          <td><strong>Online giving participation</strong></td>
+          <td>Number of recurring givers; online giving as % of total; year-over-year growth</td>
+          <td><span class="tag">Website · Email</span></td>
+        </tr>
+        <tr>
+          <td><strong>Volunteer recruitment response</strong></td>
+          <td>How many people respond to ministry recruitment — and which announcements actually worked</td>
+          <td><span class="tag">Bulletin · Email</span></td>
+        </tr>
+        <tr>
+          <td><strong>Website engagement quality</strong></td>
+          <td>Sessions, time on site, bounce rate on Mass times / registration pages, mobile %</td>
+          <td><span class="tag">Google Analytics</span></td>
+        </tr>
+        <tr>
+          <td><strong>Email list health</strong></td>
+          <td>List size growth trend; open rate (25%+ is healthy); click rate</td>
+          <td><span class="tag">Email</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── THE OFFERING ─── -->
+  <div class="section">
+    <div class="section-label">How We Help</div>
+    <h2>Three Layers of Support</h2>
+
+    <div class="offering-layers">
+      <div class="offering-layer">
+        <div class="layer-num">1</div>
+        <div class="layer-content">
+          <h4>The Communications Audit</h4>
+          <p>Before we prescribe anything, we diagnose. We review the parish website (with Google Analytics), bulletin, social presence, and email. We return with a clear assessment: what's working, what isn't, and where the highest-leverage opportunities are. Specific to this parish — not a generic checklist.</p>
+        </div>
+      </div>
+      <div class="offering-layer">
+        <div class="layer-num">2</div>
+        <div class="layer-content">
+          <h4>The Strategy Session — Full Training</h4>
+          <p>A 75–90 minute facilitated session led by Roger Rybkowski — built around the parish's actual audit results. The three-dimension audience framework, applied to their specific situation. We leave them with a written, realistic action plan. Not theory. Their parish, their people, their next three moves.</p>
+        </div>
+      </div>
+      <div class="offering-layer">
+        <div class="layer-num">3</div>
+        <div class="layer-content">
+          <h4>Training-ettes — On-Demand Learning Library</h4>
+          <p>Short, focused modules hosted on SetonAcademy. 8–12 minutes each. Parish teams can access them on their own schedule, assign them to volunteers, and return to specific topics as needs change. Each one is built around a single skill or concept — with one clear takeaway they can act on immediately.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── ROGER BREAKOUT ─── -->
+  <div class="roger-breakout">
+    <div class="rb-left">
+      <div class="rb-avatar">RR</div>
+    </div>
+    <div class="rb-right">
+      <div class="rb-label">Leading the Audit &amp; Strategy Work</div>
+      <div class="rb-name">Roger Rybkowski</div>
+      <div class="rb-title">Parish Communications Advisor · Seton Collaborative</div>
+      <p class="rb-bio">For 35 years, Roger Rybkowski built communications programs for Catholic schools and parishes across California — running his own design and communications firm for 25 years, then serving a decade as Director of Marketing and Communications at Palma School in Salinas. He knows Catholic institutional life from the inside: the pastor's authority, the staff's constraints, the volunteer culture, the parishioner who needs to feel invited rather than announced at. He has carried an institution's entire communications identity in his hands — alone — and produced work that moved people.</p>
+      <p class="rb-bio">He and his wife Cindy recently relocated to Connecticut to be closer to their family. When he arrived, he reached out to the Diocese and asked if he could help. That's who Roger is. He didn't answer a job posting. He showed up and offered. His approach to multi-channel engagement — understanding how a direct mail piece, a well-designed bulletin, a digital post, and a website work together as a system rather than as separate tasks — is something most parishes have never had applied to their specific situation. He brings that to every audit and every strategy session he leads.</p>
+      <div class="rb-chips">
+        <span class="rb-chip">35 Years Experience</span>
+        <span class="rb-chip">Catholic Institutions</span>
+        <span class="rb-chip">Brand &amp; Design</span>
+        <span class="rb-chip">Multi-Channel Strategy</span>
+        <span class="rb-chip">U.S. Navy Veteran</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── TRAINING AGENDA ─── -->
+  <div class="section">
+    <div class="section-label">The Strategy Session</div>
+    <h2>What a 90-Minute Session Looks Like</h2>
+
+    <p>The session is facilitated by Roger and designed as a working session, not a lecture. The parish team should include the pastor, the person who manages the bulletin or communications, and anyone involved in ministry programming decisions.</p>
+
+    <div class="agenda">
+      <div class="agenda-item">
+        <div class="agenda-time">0–12 min</div>
+        <div class="agenda-content">
+          <h4>Presence vs. Strategy — Reframing the Conversation</h4>
+          <p>The Parishioner Journey. The honest distinction between having a website and having a communications strategy. Setting the frame for everything that follows.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">12–30 min</div>
+        <div class="agenda-content">
+          <h4>Who Are Your People? — The Three-Dimension Audience Exercise</h4>
+          <p>A structured conversation using the engagement, life stage, and faith experience framework. Who is this parish currently reaching? Who is it not reaching? Where is the growth opportunity — and is your communications aimed at it?</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">30–55 min</div>
+        <div class="agenda-content">
+          <h4>Your Audit Results — An Honest Assessment</h4>
+          <p>Roger walks through findings from the pre-session audit: website, Google Analytics, bulletin, social, email. What's working. What isn't. Specific, constructive, and actionable — not a grade, a roadmap.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">55–70 min</div>
+        <div class="agenda-content">
+          <h4>Brand and Voice — Does Your Communications Sound Like You?</h4>
+          <p>Visual identity, tone of voice, photography. Does the parish's communications reflect who they actually are, or a generic institutional version of a parish? Practical examples of what the difference looks like.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">70–85 min</div>
+        <div class="agenda-content">
+          <h4>Three Things — Written Before Anyone Leaves</h4>
+          <p>Not a 50-point action plan. Three specific, realistic commitments — chosen together with the parish team — that will make a measurable difference in the next 30 days. Written down. Assigned to someone. With a follow-up date.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">85–90 min</div>
+        <div class="agenda-content">
+          <h4>Introduction to the Training-ette Library</h4>
+          <p>A brief walkthrough of the on-demand modules available on SetonAcademy — which ones are most relevant to this parish's situation and how to share them with staff and volunteers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── TRAINING-ETTES ─── -->
+  <div class="section">
+    <div class="section-label">On-Demand Learning</div>
+    <h2>Training-ettes — The Module Library</h2>
+
+    <p>Each module is 8–12 minutes. One concept. One clear takeaway. Designed for parish staff and volunteers who don't have time for a seminar but do have time to get better at one thing.</p>
+
+    <div class="trainings-grid">
+      <div class="training-card">
+        <div class="t-num">Module 01</div>
+        <h4>The 10-Second Website Test</h4>
+        <p>Can a stranger understand who you are, where you are, and when Mass is — in 10 seconds? How to evaluate your homepage honestly and fix the most common failures fast.</p>
+        <div class="t-tag"><span class="tag">Website</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 02</div>
+        <h4>Writing for People Who Haven't Decided Yet</h4>
+        <p>Most parish writing is written for insiders. This module covers how to write bulletin copy, event descriptions, and web content for the person who is curious but unconvinced.</p>
+        <div class="t-tag"><span class="tag">Copywriting</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 03</div>
+        <h4>Google Analytics — The 3 Numbers That Actually Matter</h4>
+        <p>You don't need to be a data analyst. Three metrics — sessions on key pages, bounce rate, and mobile percentage — tell you most of what you need to know about whether your website is working.</p>
+        <div class="t-tag"><span class="tag">Analytics</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 04</div>
+        <h4>Your Homepage Has One Job</h4>
+        <p>Most parish homepages try to do everything at once. This module explains what a clear primary call-to-action looks like — and why clarity outperforms completeness every time.</p>
+        <div class="t-tag"><span class="tag">Website</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 05</div>
+        <h4>The Bulletin as a Tool, Not a Newsletter</h4>
+        <p>The difference between a bulletin that informs and one that moves people to action. How to audit your own bulletin in 15 minutes and identify the one change that would make the biggest difference.</p>
+        <div class="t-tag"><span class="tag">Bulletin</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 06</div>
+        <h4>Social Media: Stop Announcing, Start Inviting</h4>
+        <p>What parishes that do social media well have figured out — and how to apply it without a marketing team or a content budget. The difference between a post that narrates and a post that builds relationship.</p>
+        <div class="t-tag"><span class="tag">Social Media</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 07</div>
+        <h4>Photography on a Parish Budget</h4>
+        <p>Smartphone photography that makes your parish look alive and welcoming. What to shoot, how to set it up, and what to avoid. Free tools for editing and compression. No equipment budget needed.</p>
+        <div class="t-tag"><span class="tag">Visual Identity</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 08</div>
+        <h4>Your Parish Brand: Consistent or Chaotic?</h4>
+        <p>Why visual consistency builds trust before someone walks through your doors — and how to achieve it with limited resources. A practical one-hour audit any parish can do on their own.</p>
+        <div class="t-tag"><span class="tag">Brand</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 09</div>
+        <h4>Email Lists — Your Most Underused Asset</h4>
+        <p>Your email list is the one communications channel you actually own. How to build it, what to send, how often to send it, and the simple metrics that tell you whether it's healthy.</p>
+        <div class="t-tag"><span class="tag">Email</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 10</div>
+        <h4>Reaching People at Different Life Stages</h4>
+        <p>How to apply the life stage framework to your parish's specific demographics. Practical adjustments to how you write, what you promote, and which channels you prioritize for each group.</p>
+        <div class="t-tag"><span class="tag">Audience</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 11</div>
+        <h4>Who's Not in Your Pews — and How to Reach Them</h4>
+        <p>Communications strategies for lapsed Catholics and peripheral believers. Why guilt-based messaging backfires. What low-barrier re-entry looks like and how to build it into your parish calendar.</p>
+        <div class="t-tag"><span class="tag">Strategy</span></div>
+      </div>
+      <div class="training-card">
+        <div class="t-num">Module 12</div>
+        <h4>Setting 3 Communications Goals You Can Actually Measure</h4>
+        <p>How to pick three specific, measurable communications goals for your parish — and build a simple monthly check-in that tells you whether you're moving in the right direction.</p>
+        <div class="t-tag"><span class="tag">Strategy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── WEB SCENARIOS ─── -->
+  <div class="section">
+    <div class="section-label">Your Website Situation</div>
+    <h2>We Meet You Where You Are</h2>
+
+    <p>No two parishes arrive in the same place digitally. Some have no real website at all. Some have one that hasn't been touched in years. Some are stuck in a WordPress installation that nobody on staff knows how to manage. Some have a solid foundation that just needs strategic direction. Seton's approach starts with an honest assessment of where the parish actually is — and a clear recommendation for the path forward.</p>
+
+    <div class="scenario-list">
+
+      <div class="scenario-card">
+        <div class="scenario-header">
+          <div class="sc-scenario-num">1</div>
+          <h4>No Website, or a Placeholder Page</h4>
+          <span class="scenario-tag st-red">Start from Zero</span>
+        </div>
+        <div class="scenario-body">
+          <div class="sb-col">
+            <div class="sb-col-label">What We Find</div>
+            <p>A Facebook page serving as the parish's digital home. A GoDaddy "coming soon" page. A listing on a diocesan directory with no link. People searching Google and finding nothing — or finding a competitor parish instead.</p>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What We Recommend</div>
+            <ul>
+              <li>SetonDigital standard build — fast, clean, mobile-first</li>
+              <li>Custom domain on parish name</li>
+              <li>Google Analytics from day one</li>
+              <li>All compliance pages (Safe Environments, HR Reporting)</li>
+              <li>Mass times, contact, registration — clear and findable</li>
+            </ul>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What It Takes</div>
+            <p>One intake conversation with the pastor or administrator. Seton handles design, build, and deployment. Live within days, not months. No technical knowledge required from parish staff.</p>
+          </div>
+        </div>
+        <div class="scenario-footer">
+          <span class="sf-label">SetonDigital</span>
+          <strong>Standard build · Custom domain · Managed hosting · Analytics included</strong>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-header">
+          <div class="sc-scenario-num">2</div>
+          <h4>An Outdated Website Nobody Updates</h4>
+          <span class="scenario-tag st-amber">Needs Rebuild</span>
+        </div>
+        <div class="scenario-body">
+          <div class="sb-col">
+            <div class="sb-col-label">What We Find</div>
+            <p>A site built in 2014 that still lists the previous pastor. Events from three years ago. A photo of the church that looks nothing like it does today. Not mobile-friendly. No analytics. Nobody remembers who built it or where the login is.</p>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What We Recommend</div>
+            <ul>
+              <li>Full audit first — capture what's worth keeping</li>
+              <li>SetonDigital rebuild on clean foundation</li>
+              <li>Content migration and photography update</li>
+              <li>Google Analytics and Search Console setup</li>
+              <li>Bulletin pipeline connected to keep it current</li>
+            </ul>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What It Takes</div>
+            <p>A content conversation with a staff member who knows the parish. Roger reviews what exists. Seton rebuilds. The parish gets a site that reflects who they actually are today — and a workflow to keep it that way going forward.</p>
+          </div>
+        </div>
+        <div class="scenario-footer">
+          <span class="sf-label">SetonDigital</span>
+          <strong>Audit · Rebuild · Bulletin pipeline · Managed updates</strong>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-header">
+          <div class="sc-scenario-num">3</div>
+          <h4>A WordPress Site That's Become Unmanageable</h4>
+          <span class="scenario-tag st-amber">Assess First</span>
+        </div>
+        <div class="scenario-body">
+          <div class="sb-col">
+            <div class="sb-col-label">What We Find</div>
+            <p>A WordPress installation with 47 plugins, none of which anyone remembers installing. A theme purchased from a marketplace. Update warnings that have been ignored for two years. One volunteer who "handles the website" and is about to move away.</p>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What We Recommend</div>
+            <ul>
+              <li>Security and plugin audit before anything else</li>
+              <li>Decision: stabilize vs. rebuild based on findings</li>
+              <li>If WordPress is needed for dynamic features — stabilize and manage</li>
+              <li>If it's static content only — migrate to SetonDigital</li>
+              <li>Remove single-volunteer dependency either way</li>
+            </ul>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What It Takes</div>
+            <p>Honesty about what the parish actually needs from a website. Most parishes don't need WordPress — they need a fast, clean, always-updated site. The audit tells us which path is right. We never recommend a rebuild just because it's easier for us.</p>
+          </div>
+        </div>
+        <div class="scenario-footer">
+          <span class="sf-label">SetonTech + SetonDigital</span>
+          <strong>Security audit · Honest recommendation · Managed path forward</strong>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-header">
+          <div class="sc-scenario-num">4</div>
+          <h4>A Functional Site with No Strategy Behind It</h4>
+          <span class="scenario-tag st-blue">Optimize</span>
+        </div>
+        <div class="scenario-body">
+          <div class="sb-col">
+            <div class="sb-col-label">What We Find</div>
+            <p>A reasonably modern site that works fine technically. But the homepage is built for insiders. The Mass times page is buried. There's no call to action above the fold. Analytics shows most visitors leave in under 30 seconds. The site exists — it just isn't doing anything.</p>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What We Recommend</div>
+            <ul>
+              <li>Google Analytics deep review — find where people drop off</li>
+              <li>Homepage restructure around one primary action</li>
+              <li>Navigation simplification</li>
+              <li>Copy review — is it written for seekers or insiders?</li>
+              <li>Photography and visual identity update</li>
+            </ul>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What It Takes</div>
+            <p>Roger reviews the analytics and the site together. We identify the two or three changes that will have the highest impact — and make them. This is often the fastest win in the entire communications audit. A site people find but don't use is a solved problem.</p>
+          </div>
+        </div>
+        <div class="scenario-footer">
+          <span class="sf-label">SetonDigital + Roger</span>
+          <strong>Analytics review · Strategic restructure · Copy and visual refresh</strong>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-header">
+          <div class="sc-scenario-num">5</div>
+          <h4>A Bilingual or Multi-Cultural Parish</h4>
+          <span class="scenario-tag st-blue">Specialized Build</span>
+        </div>
+        <div class="scenario-body">
+          <div class="sb-col">
+            <div class="sb-col-label">What We Find</div>
+            <p>A parish serving Spanish, Portuguese, or other language communities — with a website built entirely in English. Or a site with a separate Spanish page that's six months out of date. The community that most needs to be reached is the one least served by what exists.</p>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What We Recommend</div>
+            <ul>
+              <li>Bilingual toggle built into the standard SetonDigital template</li>
+              <li>Both languages maintained in the bulletin pipeline equally</li>
+              <li>Community-specific photography and imagery</li>
+              <li>Language preference saved across visits</li>
+              <li>Mass times and contact info prominent in both languages</li>
+            </ul>
+          </div>
+          <div class="sb-col">
+            <div class="sb-col-label">What It Takes</div>
+            <p>A content conversation with someone who knows both communities. Seton has built bilingual sites for parishes in the Diocese already — the template exists and works. The goal is a site where every parishioner sees their community reflected, not translated.</p>
+          </div>
+        </div>
+        <div class="scenario-footer">
+          <span class="sf-label">SetonDigital Bilingual</span>
+          <strong>ES/EN or PT/EN toggle · Equal content parity · Bulletin pipeline in both languages</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── CLOSING ─── -->
+  <div class="section">
+    <div class="section-label">The Mission Frame</div>
+    <h2>Why This Is Worth the Effort</h2>
+
+    <div class="callout">
+      <div class="callout-label">The Bottom Line</div>
+      <p>A beautiful website, a well-designed bulletin, and a strong social presence are not the goal. <strong>They are instruments.</strong> The goal is more people finding their way to the Church, and the people already there going deeper. Every communications decision should be tested against that standard and nothing else. This program exists to help parishes ask better questions — and build the habits that turn those questions into results.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  <strong>Seton Collaborative</strong> · Diocese of Bridgeport · Pilot Parish Communications Initiative · April 2026
+</div>
+
+</body>
+</html>
